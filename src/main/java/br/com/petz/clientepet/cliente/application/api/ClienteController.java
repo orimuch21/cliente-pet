@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 import br.com.petz.clientepet.cliente.domain.Cliente;
 import lombok.extern.log4j.Log4j2;
 
+import java.util.List;
+
 @RestController
 @Log4j2
 @RequiredArgsConstructor
@@ -20,6 +22,13 @@ private final ClienteService clienteService;
 		ClienteResponse clienteCriado = clienteService.criaCliente(clienteRequest);
 		log.info("[finaliza] ClienteController - postCliente");
 		return clienteCriado;
+	}
+
+	@Override
+	public List<ClienteListResponse> getTodosClientes() {
+		log.info("[inicia] ClienteController - getTodosCliente");
+		log.info("[finaliza] ClienteController - getTodosCliente");
+		return null;
 	}
 
 }
