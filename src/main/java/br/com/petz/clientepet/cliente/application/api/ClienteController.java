@@ -27,8 +27,9 @@ private final ClienteService clienteService;
 	@Override
 	public List<ClienteListResponse> getTodosClientes() {
 		log.info("[inicia] ClienteController - getTodosCliente");
+		List<ClienteListResponse> clientes = clienteService.buscaTodosClientes();
 		log.info("[finaliza] ClienteController - getTodosCliente");
-		return null;
+		return clientes;
 	}
 
 }
