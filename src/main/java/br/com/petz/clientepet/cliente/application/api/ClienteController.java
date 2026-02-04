@@ -48,6 +48,7 @@ private final ClienteService clienteService;
 	public void deleteClienteAtravesId(UUID idCliente) {
 		log.info("[inicia] ClienteController - deleteClienteAtravesId");
 		log.info("[idCliente] {}, idCliente");
+		clienteService.deletaClienteAtravesId(idCliente);
 		log.info("[finaliza] ClienteController - deleteClienteAtravesId");
 
 	}
