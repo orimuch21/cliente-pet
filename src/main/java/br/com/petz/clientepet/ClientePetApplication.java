@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 @RequestMapping ("/")
-public class ClientePetApplication {
+public class 	ClientePetApplication {
 
 	@GetMapping
 	public String getHomeTeste() {
