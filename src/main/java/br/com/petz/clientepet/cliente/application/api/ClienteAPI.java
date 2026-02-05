@@ -27,5 +27,9 @@ public interface ClienteAPI {
 	@DeleteMapping(value = "/{idCliente}")
 	@ResponseStatus(code = HttpStatus.NO_CONTENT)
 	void deleteClienteAtravesId (@PathVariable UUID idCliente);
+
+	@PatchMapping(value = "/{idCliente}")
+	@ResponseStatus(code = HttpStatus.NO_CONTENT)
+	void patchAlteraCliente(@PathVariable UUID idCliente, @Valid @RequestBody ClienteAlteracaoRequest clienteAlteracaoRequest);
 }
 
