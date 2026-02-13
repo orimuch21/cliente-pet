@@ -6,13 +6,9 @@ import java.util.UUID;
 
 import br.com.petz.clientepet.cliente.application.api.ClienteAlteracaoRequest;
 import br.com.petz.clientepet.cliente.application.api.ClienteRequest;
+import jakarta.persistence.*;
 import org.hibernate.validator.constraints.br.CPF;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -38,6 +34,7 @@ public class Cliente {
 	@NotBlank
 	private String celular;
 	private String telefone;
+	@Enumerated(EnumType.STRING)
 	private Sexo sexo;
 	@NotNull
 	private LocalDate dataNascimento;
