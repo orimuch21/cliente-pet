@@ -15,7 +15,6 @@ public class 	ClientePetApplication {
 	public String getHomeTeste() {
 		return "Cliente Pet - API Home";
 	}
-	
 	public static void main(String[] args) {
 		SpringApplication.run(ClientePetApplication.class, args);
 	}
