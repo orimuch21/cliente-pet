@@ -1,5 +1,6 @@
 package br.com.petz.clientepet.pet.application.api;
 
+import br.com.petz.clientepet.cliente.application.api.ClienteDetalhadoResponse;
 import br.com.petz.clientepet.cliente.application.api.ClienteListResponse;
 import jakarta.validation.Valid;
 
@@ -20,5 +21,9 @@ public interface PetAPI {
     @GetMapping
     @ResponseStatus(code = HttpStatus.OK)
     List<PetClienteListResponse> getPetsClienteComId(@PathVariable UUID idCliente);
+
+    @GetMapping(value = "/{idPet}")
+    @ResponseStatus(code = HttpStatus.OK)
+    ClienteDetalhadoResponse getClientesAtravesId(@PathVariable UUID idCliente, @PathVariable UUID idPet);
 
 }
